@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student registration form</title>
+</head>
+<body align="middle">
+    <style>
+        form {
+            border: 2px solid black;
+            width: 300px;
+            padding: 20px;
+            text-align: left;
+            margin: 0 auto;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            box-sizing: border-box;
+        }
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        form label {
+            font-weight: bold;
+        }
+        form h2 {
+            text-align: center;
+        }
+        form select {
+            height: 35px;
+        }
+        form input[type="date"] {
+            padding: 6px;
+        }
+        form input[type="email"] {
+            padding: 6px;
+        }
+        form input[type="text"] {
+            padding: 6px;
+        }
+        form input[type="text"], form input[type="email"], form input[type="date"] {
+            width: calc(100% - 12px);
+        }
+        form select {
+            width: calc(100% - 12px);
+        }
+        form input[type="submit"] {
+            width: 100%;
+        }
+    </style>
+    <h2>Student Registration Form</h2>
+    <form>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+        <label for="course">Select Course:</label>
+        <select id="course" name="course">
+            <option value="Select the branch">Select the branch</option>
+            <option value="computer_science">Computer Science</option>
+            <option value="business_administration">Business Administration</option>
+            <option value="psychology">Psychology</option>
+            <option value="AI&ML">Artificial intelligence and machine leraning</option>
+            <option value="engineering">Engineering</option>
+        </select><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
