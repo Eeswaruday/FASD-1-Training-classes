@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Selectors Demo</title>
+
+<style>
+
+/* -------- Simple Selectors -------- */
+
+/* Element selector */
+p {
+  color: blue;
+}
+
+/* ID selector */
+#mainTitle {
+  color: red;
+  text-align: center;
+}
+
+/* Class selector */
+.highlight {
+  background-color: yellow;
+}
+
+/* Group selector */
+h2, h3 {
+  color: green;
+}
+
+/* Universal selector */
+* {
+  font-family: Arial;
+}
+
+
+/* -------- Combinator Selectors -------- */
+
+/* Descendant selector */
+div p {
+  background-color: lightgray;
+}
+
+/* Child selector */
+div > span {
+  color: purple;
+}
+
+/* Adjacent sibling selector */
+h2 + p {
+  font-weight: bold;
+}
+
+/* General sibling selector */
+h3 ~ p {
+  border: 1px solid black;
+}
+
+
+/* -------- Pseudo-class Selectors -------- */
+
+a:hover {
+  color: orange;
+}
+
+li:first-child {
+  color: red;
+}
+
+
+/* -------- Pseudo-element Selectors -------- */
+
+p::first-letter {
+  font-size: 24px;
+  color: darkblue;
+}
+
+p::after {
+  content: " ✔";
+  color: green;
+}
+
+
+/* -------- Attribute Selectors -------- */
+
+input[type="text"] {
+  border: 2px solid blue;
+}
+
+a[target="_blank"] {
+  background-color: lightgreen;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 id="mainTitle">CSS Selectors Example</h1>
+
+<h2>Group Selector Example</h2>
+<p>This paragraph shows element selector.</p>
+
+<div>
+  <p>Paragraph inside div (descendant selector).</p>
+  <span>Span child of div (child selector).</span>
+</div>
+
+<h2>Adjacent Sibling Example</h2>
+<p>This paragraph comes right after h2.</p>
+
+<h3>General Sibling Example</h3>
+<p>Sibling paragraph 1.</p>
+<p>Sibling paragraph 2.</p>
+
+<h3>Pseudo-class Example</h3>
+<ul>
+  <li>First Item</li>
+  <li>Second Item</li>
+</ul>
+
+<a href="https://example.com" target="_blank">Hover over this link</a>
+
+<h3>Attribute Selector Example</h3>
+<input type="text" placeholder="Enter name">
+<input type="password" placeholder="Enter password">
+
+<p class="highlight">This paragraph uses a class selector.</p>
+
+</body>
+</html>
