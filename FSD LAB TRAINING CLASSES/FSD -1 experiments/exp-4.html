@@ -1,131 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CSS Selectors Demo</title>
+    <title>CSS Selectors Example</title>
 
-<style>
+    <style>
+        /* -------- SIMPLE SELECTORS -------- */
 
-/* -------- Simple Selectors -------- */
+        /* Element selector */
+        p {
+            color: blue;
+        }
 
-/* Element selector */
-p {
-  color: blue;
-}
+        /* ID selector */
+        #main {
+            color: red;
+        }
 
-/* ID selector */
-#mainTitle {
-  color: red;
-  text-align: center;
-}
+        /* Class selector */
+        .box {
+            background-color: lightgray;
+        }
 
-/* Class selector */
-.highlight {
-  background-color: yellow;
-}
+        /* Group selector */
+        h1, h2 {
+            color: green;
+        }
 
-/* Group selector */
-h2, h3 {
-  color: green;
-}
+        /* Universal selector */
+        * {
+            font-family: Arial;
+        }
 
-/* Universal selector */
-* {
-  font-family: Arial;
-}
+        /* -------- COMBINATOR SELECTORS -------- */
 
+        /* Descendant selector */
+        div p {
+            background-color: yellow;
+        }
 
-/* -------- Combinator Selectors -------- */
+        /* Child selector */
+        div > h3 {
+            color: purple;
+        }
 
-/* Descendant selector */
-div p {
-  background-color: lightgray;
-}
+        /* Adjacent sibling selector */
+        h1 + p {
+            color: orange;
+        }
 
-/* Child selector */
-div > span {
-  color: purple;
-}
+        /* General sibling selector */
+        h2 ~ p {
+            color: brown;
+        }
 
-/* Adjacent sibling selector */
-h2 + p {
-  font-weight: bold;
-}
+        /* -------- PSEUDO-CLASS SELECTOR -------- */
 
-/* General sibling selector */
-h3 ~ p {
-  border: 1px solid black;
-}
+        a:hover {
+            color: red;
+        }
 
+        /* -------- PSEUDO-ELEMENT SELECTOR -------- */
 
-/* -------- Pseudo-class Selectors -------- */
+        p::first-letter {
+            font-size: 30px;
+        }
 
-a:hover {
-  color: orange;
-}
+        /* -------- ATTRIBUTE SELECTOR -------- */
 
-li:first-child {
-  color: red;
-}
+        input[type="text"] {
+            border: 2px solid blue;
+        }
 
-
-/* -------- Pseudo-element Selectors -------- */
-
-p::first-letter {
-  font-size: 24px;
-  color: darkblue;
-}
-
-p::after {
-  content: " ✔";
-  color: green;
-}
-
-
-/* -------- Attribute Selectors -------- */
-
-input[type="text"] {
-  border: 2px solid blue;
-}
-
-a[target="_blank"] {
-  background-color: lightgreen;
-}
-
-</style>
+    </style>
 </head>
 
 <body>
 
-<h1 id="mainTitle">CSS Selectors Example</h1>
+    <h1>Heading 1</h1>
+    <p>This paragraph comes after h1 (adjacent sibling)</p>
 
-<h2>Group Selector Example</h2>
-<p>This paragraph shows element selector.</p>
+    <h2>Heading 2</h2>
+    <p>This is general sibling of h2</p>
 
-<div>
-  <p>Paragraph inside div (descendant selector).</p>
-  <span>Span child of div (child selector).</span>
-</div>
+    <div>
+        <p>Paragraph inside div (descendant)</p>
+        <h3>Child heading (child selector)</h3>
+    </div>
 
-<h2>Adjacent Sibling Example</h2>
-<p>This paragraph comes right after h2.</p>
+    <p id="main">This is ID selector example</p>
 
-<h3>General Sibling Example</h3>
-<p>Sibling paragraph 1.</p>
-<p>Sibling paragraph 2.</p>
+    <p class="box">This is class selector example</p>
 
-<h3>Pseudo-class Example</h3>
-<ul>
-  <li>First Item</li>
-  <li>Second Item</li>
-</ul>
+    <a href="#">Hover over this link</a><br><br>
 
-<a href="https://example.com" target="_blank">Hover over this link</a>
-
-<h3>Attribute Selector Example</h3>
-<input type="text" placeholder="Enter name">
-<input type="password" placeholder="Enter password">
-
-<p class="highlight">This paragraph uses a class selector.</p>
+    <input type="text" placeholder="Enter text here">
 
 </body>
 </html>
