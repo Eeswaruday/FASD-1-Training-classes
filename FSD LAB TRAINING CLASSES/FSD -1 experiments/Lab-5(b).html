@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Image Example</title>
+
+    <style>
+        body {
+            height: 2000px; /* To enable scrolling */
+        }
+
+        /* Background Image Styling */
+        .bg-image {
+            position: fixed;              /* stays in place */
+            top: 50%;                     /* halfway down */
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(20deg); /* center + tilt */
+            opacity: 0.5;                 /* optional: light effect */
+            z-index: -1;                  /* send behind content */
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Scroll the page</h1>
+    <p>The background image will stay fixed and tilted.</p>
+
+    <!-- Image -->
+    <img src="background.jpg" class="bg-image" width="300">
+
+</body>
+</html>
