@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal and External JavaScript</title>
+
+    <!-- Internal JavaScript -->
+    <script>
+        function showMessage() {
+            alert("This is Internal JavaScript");
+        }
+    </script>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+    <h2>JavaScript Example</h2>
+
+    <!-- Button for Internal JS -->
+    <button onclick="showMessage()">Internal JS</button>
+
+    <br><br>
+
+    <!-- Button for External JS -->
+    <button onclick="externalMessage()">External JS</button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+external JS
+function externalMessage() {
+    alert("This is External JavaScript");
+}
